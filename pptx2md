@@ -9,10 +9,10 @@ if [ $# -ne 1 ]; then
 	echo "Usage $0 <file.pptx>"
 	exit 1
 fi
-
+pptname="$1"
 temp="/tmp/pptx2md"
-output="$temp/$(basename $1).md"
-output2="$temp/$(basename $1)2.md"
+output="$temp/$(basename $pptname).md"
+output2="$temp/$(basename $pptname)2.md"
 
 #extract file
 unzip -oq -d $temp "$1"
