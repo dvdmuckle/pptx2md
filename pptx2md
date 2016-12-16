@@ -15,7 +15,7 @@ output="$temp/$(basename $1).md"
 output2="$temp/$(basename $1)2.md"
 
 #extract file
-unzip -oq -d $temp $1
+unzip -oq -d $temp '$1'
 if [ $? -ne 0 ]; then
 	echo "Failed to extract."
 	exit 1
